@@ -38,7 +38,6 @@ public class CCAAController {
 	@PutMapping("/{codigo}")
 	public ResponseEntity<?> update(@RequestBody CCAA ccaa, @PathVariable Integer codigo) {
 		try {
-			CCAA existCCAA = ccaaService.getCCAA(codigo);
 			ccaa.setCodigo_ccaa(codigo);
 			ccaaService.saveCCAA(ccaa);
 			return new ResponseEntity<>(HttpStatus.OK);
