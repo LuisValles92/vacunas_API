@@ -18,6 +18,7 @@ public class CCAA {
 	private Date fecha_registro_ultima_vacuna;
 
 	public CCAA() {
+		System.out.println("Constructor 1");
 	}
 
 	public CCAA(int codigo_ccaa, String nombre_ccaa, int dosis_entregadas_pfizer, int dosis_entregadas_moderna,
@@ -32,7 +33,23 @@ public class CCAA {
 		this.dosis_entregadas_porcentaje = dosis_entregadas_porcentaje;
 		this.numero_personas_pauta_completa = numero_personas_pauta_completa;
 		this.fecha_registro_ultima_vacuna = fecha_registro_ultima_vacuna;
+		System.out.println("Constructor 2");
 	}
+
+	/*
+	public CCAA(int codigo_ccaa, String nombre_ccaa, int dosis_entregadas_pfizer, int dosis_entregadas_moderna,
+			int dosis_administradas, int numero_personas_pauta_completa, Date fecha_registro_ultima_vacuna) {
+		this.codigo_ccaa = codigo_ccaa;
+		this.nombre_ccaa = nombre_ccaa;
+		this.dosis_entregadas_pfizer = dosis_entregadas_pfizer;
+		this.dosis_entregadas_moderna = dosis_entregadas_moderna;
+		this.dosis_entregadas_totales = this.dosis_entregadas_pfizer + this.dosis_entregadas_moderna;
+		this.dosis_administradas = dosis_administradas;
+		this.dosis_entregadas_porcentaje = (this.dosis_administradas * 100) / this.dosis_entregadas_totales;
+		this.numero_personas_pauta_completa = numero_personas_pauta_completa;
+		this.fecha_registro_ultima_vacuna = fecha_registro_ultima_vacuna;
+		System.out.println("Constructor 3");
+	}*/
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
