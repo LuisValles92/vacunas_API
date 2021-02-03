@@ -11,45 +11,25 @@ public class CCAA {
 	private String nombre_ccaa;
 	private int dosis_entregadas_pfizer;
 	private int dosis_entregadas_moderna;
-	private int dosis_entregadas_totales;
 	private int dosis_administradas;
-	private float dosis_entregadas_porcentaje;
 	private int numero_personas_pauta_completa;
 	private Date fecha_registro_ultima_vacuna;
 
 	public CCAA() {
-		System.out.println("Constructor 1");
+		super();
 	}
 
-	public CCAA(int codigo_ccaa, String nombre_ccaa, int dosis_entregadas_pfizer, int dosis_entregadas_moderna,
-			int dosis_entregadas_totales, int dosis_administradas, float dosis_entregadas_porcentaje,
-			int numero_personas_pauta_completa, Date fecha_registro_ultima_vacuna) {
-		this.codigo_ccaa = codigo_ccaa;
-		this.nombre_ccaa = nombre_ccaa;
-		this.dosis_entregadas_pfizer = dosis_entregadas_pfizer;
-		this.dosis_entregadas_moderna = dosis_entregadas_moderna;
-		this.dosis_entregadas_totales = dosis_entregadas_totales;
-		this.dosis_administradas = dosis_administradas;
-		this.dosis_entregadas_porcentaje = dosis_entregadas_porcentaje;
-		this.numero_personas_pauta_completa = numero_personas_pauta_completa;
-		this.fecha_registro_ultima_vacuna = fecha_registro_ultima_vacuna;
-		System.out.println("Constructor 2");
-	}
-
-	/*
 	public CCAA(int codigo_ccaa, String nombre_ccaa, int dosis_entregadas_pfizer, int dosis_entregadas_moderna,
 			int dosis_administradas, int numero_personas_pauta_completa, Date fecha_registro_ultima_vacuna) {
+		super();
 		this.codigo_ccaa = codigo_ccaa;
 		this.nombre_ccaa = nombre_ccaa;
 		this.dosis_entregadas_pfizer = dosis_entregadas_pfizer;
 		this.dosis_entregadas_moderna = dosis_entregadas_moderna;
-		this.dosis_entregadas_totales = this.dosis_entregadas_pfizer + this.dosis_entregadas_moderna;
 		this.dosis_administradas = dosis_administradas;
-		this.dosis_entregadas_porcentaje = (this.dosis_administradas * 100) / this.dosis_entregadas_totales;
 		this.numero_personas_pauta_completa = numero_personas_pauta_completa;
 		this.fecha_registro_ultima_vacuna = fecha_registro_ultima_vacuna;
-		System.out.println("Constructor 3");
-	}*/
+	}
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -85,28 +65,12 @@ public class CCAA {
 		this.dosis_entregadas_moderna = dosis_entregadas_moderna;
 	}
 
-	public int getDosis_entregadas_totales() {
-		return dosis_entregadas_totales;
-	}
-
-	public void setDosis_entregadas_totales(int dosis_entregadas_totales) {
-		this.dosis_entregadas_totales = dosis_entregadas_totales;
-	}
-
 	public int getDosis_administradas() {
 		return dosis_administradas;
 	}
 
 	public void setDosis_administradas(int dosis_administradas) {
 		this.dosis_administradas = dosis_administradas;
-	}
-
-	public float getDosis_entregadas_porcentaje() {
-		return dosis_entregadas_porcentaje;
-	}
-
-	public void setDosis_entregadas_porcentaje(float dosis_entregadas_porcentaje) {
-		this.dosis_entregadas_porcentaje = dosis_entregadas_porcentaje;
 	}
 
 	public int getNumero_personas_pauta_completa() {
